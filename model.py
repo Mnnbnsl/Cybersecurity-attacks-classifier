@@ -9,7 +9,7 @@ from sklearn import preprocessing
 file_path = '/kaggle/input/edgeiiotset-cyber-security-dataset-of-iot-iiot/Edge-IIoTset dataset/Selected dataset for ML and DL/ML-EdgeIIoT-dataset.csv'
 df = pd.read_csv(file_path , low_memory = False)
 df = shuffle(df)
-df = df.sample(frac = 0.25, random_state=42)
+
 # Dropping unneseccary data
 
 drop_columns = ["frame.time", "ip.src_host", "ip.dst_host", "arp.src.proto_ipv4","arp.dst.proto_ipv4", "http.file_data","http.request.full_uri","icmp.transmit_timestamp","http.request.uri.query", "tcp.options","tcp.payload","tcp.srcport","tcp.dstport", "udp.port", "mqtt.msg"]
