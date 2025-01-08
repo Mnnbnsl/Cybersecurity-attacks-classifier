@@ -103,7 +103,7 @@ for i, row in df.iterrows():
     query = labels.iloc[i]
     context = retrieve_context(query, model, index, data_chunks)
     augmented_features.append(augment_features(row.tolist(), context, model))
-    print(i)
+    
 
 augmented_features = np.array(augmented_features)
 
